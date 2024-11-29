@@ -1,0 +1,78 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.container {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Dark mode styles (default) */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Light mode */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Common styles */
+h1 {
+  text-align: center;
+}
+
+#summary,
+#transactions,
+#chart-container {
+  margin-top: 20px;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: var(--select-bg);
+  color: var(--select-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme-specific variables */
+body.dark-mode select {
+  --select-bg: #333333;
+  --select-color: #ffffff;
+}
+
+body.light-mode select {
+  --select-bg: #ffffff;
+  --select-color: #000000;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
